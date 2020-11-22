@@ -1,0 +1,314 @@
+<?php
+
+if (isset($_POST['nome']) && !empty($_POST['nome'])){
+
+  $nome = ucwords(addslashes($_POST['nome']));
+  $email = addslashes($_POST['email']);
+  $telefone = addslashes($_POST['telefone']);
+  $msg = addslashes($_POST['msg']);
+
+  $para = "wgomes2262@yahoo.com.br";
+  $pergunta = "Email recebido - digicomp.tk";
+  $corpo = "Nome: ".$nome." \r\n".
+  "Email: ".$email."\r\n".
+  "Telefone: ".$telefone."\r\n".
+  "Mensagem: ".$msg;
+
+  $cabecalho = "From: wesleygomes2262@gmail.com"."\r\n".
+  "Reply-To: ".$email."\r\n".
+  "X-Mailer: PHP/".phpversion();
+
+
+  mail($para, $pergunta, $corpo, $cabecalho);
+
+
+  echo  "<script>alert('Email enviado com sucesso!');</script>";
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Digicomp Solutions</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/d.ico" rel="icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#home"><img src="img/logo.png" height="72px" alt="" title="" /></img></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#home">Home</a></li>
+          <li><a href="#empresa">A empresa</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!-- home Section -->
+  <section id="home">
+    <div class="home-container">
+      <h1>Digicomp Solutions</h1>
+      <h2>Um mundo de tecnologia está aqui!</h2>
+      <a href="#servicos" class="btn-nossos-servicos">Veja nossos serviços</a>
+    </div>
+  </section><!-- #home -->
+
+  <main id="main">
+
+    <!-- empresa Section -->
+    <section id="empresa">
+      <div class="container">
+        <div class="row empresa-container">
+
+          <div class="col-lg-12 content order-lg-1 order-2">
+            <h2 class="title">A Digicomp</h2>
+            <p>
+              Fundada em 2015 por Wesley Gomes, a DIGICOMP é exemplo de credibilidade e confiabilidade, oferecendo os melhores serviços para seus clientes nas diversas áreas da informática como vendas de jogos e acessórios, manutenção e formatação de computadores/notebooks, manutenção e formatação de celulares/tablets, instalação e manutenção de redes, assistência técnica entre outras.
+
+              De olho nas tendências e mudanças do mundo tecnológico, a DIGICOMP tem sempre o cuidado de se manter atualizada e em constante aperfeiçoamento. O resultado é o melhor serviço pelo menor preço com a melhor qualidade que o mercado exige.
+            </p>
+            <hr><br>
+
+            <div class="row empresa-container">
+
+              <div class="col-md-4 icon-box wow fadeInUp">
+                <div class="icon"><i class="fa fa-map"></i></div>
+                <h4 class="title"><a href="">Missão</a></h4>
+                <p class="description">Sempre levar aos nossos clientes sempre o melhor serviço, pelo melhor e mais justo preço.</p>
+              </div>
+
+              <div class="col-md-4 icon-box wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon"><i class="fa fa-eye"></i></div>
+                <h4 class="title"><a href="">Visão</a></h4>
+                <p class="description">Ser referência no ramo da informática em Bauru e região. </p>
+              </div>
+
+              <div class="col-md-4 icon-box wow fadeInUp" data-wow-delay="0.4s">
+                <div class="icon"><i class="fa fa-suitcase  "></i></div>
+                <h4 class="title"><a href="">Valores</a></h4>
+                <p class="description">Humildade e responsabilidade, ética e transparência, foco no cliente, superação e evolução constante.</p>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- #empresa -->
+
+    <!-- servicos Section -->
+    <section id="servicos">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h3 class="section-title">Nossos serviços</h3>
+          <p class="section-description">Sempre oferecendo os melhores produtos pelos menores preços!</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-desktop"></i></a></div>
+              <h4 class="title"><a href="">Computadores/notebooks</a></h4>
+              <p class="description">Formatação e manutenção de computadores/notebooks</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-gamepad"></i></a></div>
+              <h4 class="title"><a href="">Jogos</a></h4>
+              <p class="description">As melhores novidades do mundo dos games em diversas plataformas</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-keyboard-o"></i></a></div>
+              <h4 class="title"><a href="">Assistência técnica especializada</a></h4>
+              <p class="description">Apple, Samsung e Motorola</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-window-restore"></i></a></div>
+              <h4 class="title"><a href="">Celulares/tablets</a></h4>
+              <p class="description">Manutenção e formatação de celulares/tablets de todos os modelos</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-wifi"></i></a></div>
+              <h4 class="title"><a href="">Roteadores</a></h4>
+              <p class="description">Instalação e configuração de roteadores</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-camera"></i></a></div>
+              <h4 class="title"><a href="">Acessórios</a></h4>
+              <p class="description">HeadPhones, joysticks, pendrives entre outros</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #servicos -->
+
+    <!-- localização Section -->
+    <section id="localizacao">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Onde estamos</h3>
+          <p class="section-description">Vamos tomar um café?</p>
+        </div>
+      </div>
+      <div class="container-fluid wow fadeInUp">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3690.771302036184!2d-49.0586913!3d-22.3244874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf679ea76937f9%3A0x34ff2244a87c2565!2sR.+Almeida+Brand%C3%A3o%2C+9-11+-+Vila+Cardia%2C+Bauru+-+SP%2C+17013-421!5e0!3m2!1spt-BR!2sbr!4v1510967182069" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="info">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>Rua Almeida Brandão, 9-11<br>Bauru-SP / 17013-421</p>
+        </div>
+      </div>
+
+    </section><!-- #localização -->
+
+
+
+
+
+    <!-- contato Section -->
+    <section id="contato">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Contato</h3>
+          <p class="section-description">Dúvidas? Deixe-nos uma mensagem!</p>
+        </div>
+      </div>
+
+      <div class="container wow fadeInUp">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>gomes.wesley@outlook.com.br</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>14 99114-0695</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/digicomptec/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/_gomes.wesley/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/wesley-gomes-69175411b/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <form method="POST"s>
+                <div class="form-group">
+                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" data-rule="minlen:3"/>
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Por favor, digite um Email válido" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="telefone" id="sp_celphones" placeholder="Telefone" data-rule="minlen:4" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="msg" rows="6" data-rule="required" placeholder="Mensagem"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><input type="submit" value="Enviar" /></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contato -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright 2017 - <strong>Wesley Gomes</strong>
+      </div>
+      <div class="credits">
+      Todos os direitos reservados</a>
+    </div>
+  </div>
+</footer><!-- #footer -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/jquery/jquery.mask.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+
+
+
+<!-- contato Form JavaScript File -->
+<script src="contatoform/contatoform.js"></script>
+
+<!-- Template Main Javascript File -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
